@@ -5,7 +5,7 @@ const path = require('path');
 const fs = require('fs');
 require('dotenv').config();
 
-const studentRoutes = require('./routes/students');
+const studentRoutes = require('./routes/Students.js');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
