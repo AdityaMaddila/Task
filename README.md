@@ -6,7 +6,7 @@ A web application to upload Excel/CSV files and manage student grades with autom
 
 ### 1. Clone & Install
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/AdityaMaddila/Task/
 cd student-grade-system
 
 # Install backend dependencies
