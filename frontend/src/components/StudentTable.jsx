@@ -4,7 +4,7 @@ const StudentTable = ({ students, onUpdateStudent, onDeleteStudent, disabled }) 
   const [editingId, setEditingId] = useState(null);
   const [editData, setEditData] = useState({});
   
-  // Pagination states
+  
   const [currentPage, setCurrentPage] = useState(1);
   const [studentsPerPage, setStudentsPerPage] = useState(10);
   const [sortField, setSortField] = useState('created_at');
@@ -47,18 +47,18 @@ const StudentTable = ({ students, onUpdateStudent, onDeleteStudent, disabled }) 
       setSortField(field);
       setSortDirection('asc');
     }
-    setCurrentPage(1); // Reset to first page when sorting
+    setCurrentPage(1); 
   };
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    setEditingId(null); // Cancel any editing when changing pages
+    setEditingId(null); 
     setEditData({});
   };
 
   const handleSearch = (value) => {
     setSearchTerm(value);
-    setCurrentPage(1); // Reset to first page when searching
+    setCurrentPage(1);
   };
 
   const formatDate = (dateString) => {

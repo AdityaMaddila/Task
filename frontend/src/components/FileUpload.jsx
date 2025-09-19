@@ -27,9 +27,9 @@ const FileUpload = ({ onFileUpload, disabled }) => {
 
   const handleFileSelect = (file) => {
     const allowedTypes = [
-      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', // .xlsx
-      'application/vnd.ms-excel', // .xls
-      'text/csv' // .csv
+      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 
+      'application/vnd.ms-excel', 
+      'text/csv' 
     ];
     
     if (!allowedTypes.includes(file.type) && 
@@ -53,7 +53,7 @@ const FileUpload = ({ onFileUpload, disabled }) => {
     if (selectedFile && onFileUpload) {
       onFileUpload(selectedFile);
       setSelectedFile(null);
-      // Reset file input
+
       if (fileInputRef.current) {
         fileInputRef.current.value = '';
       }

@@ -9,9 +9,9 @@ function App() {
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
-  const [messageType, setMessageType] = useState(''); // 'success' or 'error'
+  const [messageType, setMessageType] = useState('');
 
-  // Fetch students on component mount
+  
   useEffect(() => {
     fetchStudents();
   }, []);
@@ -50,7 +50,7 @@ function App() {
 
       if (response.ok) {
         showMessage(data.message, 'success');
-        fetchStudents(); // Refresh the student list
+        fetchStudents();
       } else {
         showMessage(data.error || 'Upload failed', 'error');
       }
@@ -77,7 +77,7 @@ function App() {
 
       if (response.ok) {
         showMessage('Student updated successfully', 'success');
-        fetchStudents(); // Refresh the student list
+        fetchStudents(); 
       } else {
         showMessage(data.error || 'Update failed', 'error');
       }
@@ -104,7 +104,7 @@ function App() {
 
       if (response.ok) {
         showMessage('Student deleted successfully', 'success');
-        fetchStudents(); // Refresh the student list
+        fetchStudents(); 
       } else {
         showMessage(data.error || 'Delete failed', 'error');
       }
@@ -122,7 +122,7 @@ function App() {
     setTimeout(() => {
       setMessage('');
       setMessageType('');
-    }, 5000); // Clear message after 5 seconds
+    }, 5000); 
   };
 
   return (
